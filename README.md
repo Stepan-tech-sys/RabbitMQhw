@@ -9,6 +9,7 @@
 Добавьте management plug-in и зайдите в веб-интерфейс.
 
 *Итогом выполнения домашнего задания будет приложенный скриншот веб-интерфейса RabbitMQ.*
+
 ![1](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2017-46-58.png)
 ---
 
@@ -28,8 +29,11 @@ $ pip install pika
 После чего запустите второй скрипт consumer.py и сделайте скриншот результата выполнения скрипта
 
 *В качестве решения домашнего задания приложите оба скриншота, сделанных на этапе выполнения.*
+
 [2](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2021-22-06.png)
+
 [3](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2021-23-08.png)
+
 Для закрепления материала можете попробовать модифицировать скрипты, чтобы поменять название очереди и отправляемое сообщение.
 
 ---
@@ -50,24 +54,34 @@ $ cat /etc/hosts
 Затем объедините две машины в кластер и создайте политику ha-all на все очереди.
 
 *В качестве решения домашнего задания приложите скриншоты из веб-интерфейса с информацией о доступных нодах в кластере и включённой политикой.*
+
 [4](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2022-45-11.png)
+
 [5](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2022-45-18.png)
+
 Также приложите вывод команды с двух нод:
 
 ```shell script
 $ rabbitmqctl cluster_status
 ```
+
 [6](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2022-58-11.png)
+
 [7](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2022-58-33.png)
+
 Для закрепления материала снова запустите скрипт producer.py и приложите скриншот выполнения команды на каждой из нод:
 
 ```shell script
 $ rabbitmqadmin get queue='hello'
 ```
+
 [8](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2023-14-17.png)
+
 [9](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2023-17-58.png)
+
 После чего попробуйте отключить одну из нод, желательно ту, к которой подключались из скрипта, затем поправьте параметры подключения в скрипте consumer.py на вторую ноду и запустите его.
 
 *Приложите скриншот результата работы второго скрипта.*
+
 [10](https://github.com/Stepan-tech-sys/screenshots/blob/main/Screenshot%20from%202026-11-11%2023-36-20.png)
 
